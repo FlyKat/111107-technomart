@@ -30,11 +30,12 @@
             </a>
           </div>
           <div class="checkout">
-            <a class="checkout" href="#">Оформить заказ</a>
+            <a class="checkout-link" href="#">Оформить заказ</a>
           </div>
         </div>
       </div>
     </section>
+    <!--end page top-->
     <header class="main-header">
       <div class="container">
         <div class="main-header-info">
@@ -51,13 +52,13 @@
         <nav class="main-navigation">
           <ul>
             <li>
-              <a class="main-nav-link" href="index.html">Главная</a>
+              Главная
             </li>
             <li>
               <a class="main-nav-link" href="#">Компания</a>
             </li>
             <li>
-              Каталог
+              <a class="main-nav-link" href="catalog.html">Каталог</a>
             </li>
             <li>
               <a class="main-nav-link" href="#">Новости</a>
@@ -75,6 +76,7 @@
         </nav>
       </div>
     </header>
+    <!--end main header-->
     <main>
       <section class="promo">
         <div class="container">
@@ -96,12 +98,12 @@
               <input type="radio" name="promo-slider-switch" value="slide2" id="slide2">
             </div>
             <div class="promo-slide">
-              <h3 class=promo-slide-title>Перфораторы</h3>
+              <h3 class="promo-slide-title">Перфораторы</h3>
               <p class="promo-slide-info">Настоящие мужские игрушки</p>
               <a class="promo-slide-btn" href="catalog.html">Открыть каталог</a>
             </div>
             <div class="promo-slide">
-              <h3 class=promo-slide-title>Дрели</h3>
+              <h3 class="promo-slide-title">Дрели</h3>
               <p class="promo-slide-info">Соседям на радость!</p>
               <a class="promo-slide-btn" href="catalog.html">Открыть каталог</a>
             </div>
@@ -112,10 +114,11 @@
           </div>
           <div class="promo-block-delivery">
             <h3 class="promo-block-title">Доставка</h3>
-            <a class="promo-block-btn" href="#">Бесплатно</a>            
+            <a class="promo-block-btn" href="#">Бесплатно</a>
           </div>
         </div>
       </section>
+      <!--end promo-->
       <section class="popular-items">
         <div class="container">
           <header class="popular-items-header">
@@ -171,6 +174,7 @@
           </article>
         </div>
       </section>
+      <!--end popular-items-->
       <section class="popular-brends">
         <div class="container">
           <header class="popular-brends-header">
@@ -221,17 +225,20 @@
           </ul>
         </div>
       </section>
+      <!--end popular-brends-->
       <section class=services>
         <div class="container">
           <h2 class="services-title">Сервисы</h2>
           <p class="services-slogan">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными</p>
           <div class="services-switch">
             <input type="radio" name="services-slider-switch" value="delivery" id="delivery" checked>
-            <label for="delivery">Доставка</label>
             <input type="radio" name="services-slider-switch" value="guarantee" id="guarantee">
-            <label for="guarantee">Гарантия</label>
             <input type="radio" name="services-slider-switch" value="credit" id="credit">
-            <label for="credit">Кредит</label>
+            <div class="service-control">
+              <label for="delivery">Доставка</label>
+              <label for="guarantee">Гарантия</label>
+              <label for="credit">Кредит</label>
+            </div>
           </div>
           <div class="services-slider">
             <div class="services-slide">
@@ -250,6 +257,7 @@
           </div>
         </div>
       </section>
+      <!--end services-->
       <section class="info">
         <div class="container">
           <div class="info-about">
@@ -273,6 +281,7 @@
           </div>
         </div>
       </section>
+      <!--end info-->
     </main>
     <footer class="main-footer">
       <div class="container">
@@ -318,7 +327,8 @@
         </ul>
       </div >
     </footer>
-    <section class="bottom">
+    <!--end main footer-->
+    <section class="page-bottom">
       <div class="container">
         <div class="copyright">
           <p>©2010-2016 Компания «Техномарт»
@@ -339,5 +349,6 @@
         </div>
       </div>
     </section>
+    <!--end page-bottom-->
   </body>
 </html>
