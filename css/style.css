@@ -21,3 +21,390 @@ article h3 {
   line-height: 20px;
   color: #000000;
 }
+
+/* outline для наглядности*/
+
+ .clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+
+.container {
+  outline: solid green;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+ }
+
+ .page-top {
+   outline: solid yellow;
+ }
+
+.top-logo {
+  float: left;
+  width: 220px;
+  height: 42px;
+  background-color: red;
+  margin-right: 10px;
+}
+/* как все-таки должен выглядеть поиск?*/
+.search {
+  outline: solid red;
+  float: left;
+  width: 90px;
+  margin-right: 160px;
+}
+
+.order-block {
+  outline: solid red;
+  float: right;
+  width: 460px;
+}
+
+/* внутри oreder-block вроде не на этапе сеток, а дальше, пока не до конца*/
+.bookmark {
+  outline: solid blue;
+  display: inline-block;
+  width: 140px;
+}
+
+.cart {
+  outline: solid blue;
+  display: inline-block;
+  width: 150px;
+}
+
+.checkout {
+  outline: solid blue;
+  display: inline-block;
+  width: 150px;
+}
+
+.main-header {
+  outline: solid blue;
+}
+
+.main-header-info {
+  outline: solid red;
+  width: 940px;
+
+}
+
+.slogan {
+  outline: solid grey;
+  float: left;
+  width: 198px;
+  margin-right: 70px;
+}
+
+.address-header {
+  outline: solid grey;
+  float: left;
+  width: 271px;
+}
+
+.user-block {
+  outline: solid grey;
+  float: right;
+  width: 300px;
+}
+
+.login {
+  outline: solid black;
+}
+
+.signup {
+  outline: solid black;
+}
+
+.main-navigation {
+  outline: solid red;
+  width: 940px;
+}
+
+.main-navigation li {
+  outline: solid grey;
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+}
+
+
+.promo {
+  outline: solid yellow;
+  margin-bottom: 53px;
+}
+
+.promo-block {
+  outline: solid red;
+  float: left;
+  width: 300px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.promo-block:nth-child(n+3) {
+  margin-right: 0;
+}
+
+.promo-slider {
+  outline: solid red;
+  float: left;
+  width: 620px;
+  margin-right: 20px;
+}
+
+.popular-items {
+  outline: solid yellow;
+}
+
+.popular-items-header {
+  outline: solid red;
+  width: 940px;
+  margin-bottom: 20px;
+}
+
+.item {
+  outline: solid grey 1px;
+  display: inline-block;
+  vertical-align: top;
+  width: 218px;
+  margin-right: 20px
+  margin-bottom: 20px;
+  margin-left: 0;
+  /*нужно задать min-height?*/
+}
+
+/*.item:nth-child(n+2) {
+ margin-left: 14px;
+}  /*почему действует и на первый? и как это вообще сделать, учитывая, что карточки товаров одинаковые на главной и каталоге, но разное количество колонок?*/
+
+.popular-brends {
+  outline: solid yellow;
+  margin-bottom: 85px;
+}
+
+.popular-brends-header {
+  outline: solid red;
+  width: 940px;
+  margin-bottom: 20px;
+}
+
+.brends-logo {
+  outline: solid red;
+}
+
+.brends-logo-item {
+  outline: solid grey 1px;
+  display: inline-block;
+  vertical-align: top;
+  width: 218px;
+  margin-right: 60px;
+  margin-bottom: 20px;
+  margin-left: -40px;
+}
+
+.brends-logo-item:nth-child(4n) {
+  margin-right: 0;
+} /*почему не работает*/
+
+.services {
+  outline: solid yellow;
+  margin-bottom: 82px;
+
+}
+
+.services-title {
+  outline: solid red;
+}
+
+.services-slogan {
+  outline: solid red;
+}
+
+/*т.к. в разметке слайдер еще правильно не размечен, то и сделать ему сетку не выходит*/
+.services-slider {
+  outline: solid red;
+  float: right;
+  width: 670px;
+}
+
+.services-control {
+  outline: solid grey;
+  float: left;
+  width: 240px;
+}
+
+.services-slide {
+  outline: solid grey;
+  float: right;
+}
+
+.info {
+  outline: solid yellow;
+}
+
+.info-about {
+  outline: solid red;
+  float: left;
+  width: 570px;
+}
+
+.info-contacts {
+  outline: solid red;
+  float: right;
+  width: 320px;
+}
+
+.main-footer {
+  outline: solid blue;
+}
+
+.bottom-logo {
+  display: inline-block;
+  vertical-align:top;
+  width: 220px;
+  height: 63px;
+  background-color: red;
+  margin-right: 100px;
+  margin-bottom: 30px;
+}
+
+.address-footer {
+  outline: solid red;
+  float: left;
+  width: 340px;
+}
+
+.main-navigation-footer {
+  float: right;
+  width: 570px;
+}
+
+.promo-navigation-footer {
+  float: right;
+  width: 570px;
+}
+
+
+.main-navigation-footer li {
+  outline: solid red;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.promo-navigation-footer li {
+  outline: solid red;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.page-bottom {
+  outline: solid yellow;
+}
+
+.copyright {
+  outline: solid red;
+  float: left;
+  width: 230px;
+  margin-right: 150px;
+}
+
+.social {
+  outline: solid red;
+  float: left;
+  width: 160px;
+  margin-right: 90px;
+}
+
+.social-btn {
+  outline: solid grey;
+}
+
+.mail {
+  outline: solid red;
+  float: left;
+  width: 140px;
+}
+
+.developer {
+  outline: solid red;
+  float: right;;
+  width: 110px;
+}
+
+/* end index start catalog*/
+.logged-user {
+  outline: solid black;
+}
+
+.user-orders {
+  outline: solid black;
+}
+
+.user-account{
+  outline: solid black;
+}
+
+.breadcrumbs {
+  outline: solid yellow;
+}
+
+.breadcrumbs li {
+  outline: solid red;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: -40px;
+  margin-right: 60px;
+}
+
+.catalog {
+  outline: solid yellow;
+}
+
+.catalog-header {
+  outline: solid red;
+}
+
+.filter {
+  outline: solid red;
+  float: left;
+  width: 220px;
+}
+
+.filter-title {
+  outline: solid orange;
+}
+
+.catalog-content {
+  outline: solid red;
+  float: right;
+  width: 700px;
+}
+
+.sort {
+  outline: solid orange;
+}
+
+.sort-use li {
+  display: inline-block;
+}
+
+.sort-index  {
+  display: inline-block;
+}
+
+.items {
+  outline: solid orange;
+}
+
+.pagination {
+  outline: solid orange;
+}
+
+.pagination li {
+  outline: solid grey;
+  display: inline-block;
+}
