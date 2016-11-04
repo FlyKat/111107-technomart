@@ -40,6 +40,7 @@ article h3 {
 
  .page-top {
    outline: solid yellow;
+   min-height: 42px;
  }
 
 .top-logo {
@@ -67,18 +68,21 @@ article h3 {
 .bookmark {
   outline: solid blue;
   display: inline-block;
+  vertical-align: top;
   width: 140px;
 }
 
 .cart {
   outline: solid blue;
   display: inline-block;
+  vertical-align: top;
   width: 150px;
 }
 
 .checkout {
   outline: solid blue;
   display: inline-block;
+  vertical-align: top;
   width: 150px;
 }
 
@@ -166,12 +170,28 @@ article h3 {
   margin-bottom: 20px;
 }
 
+.popular-items-title {
+  outline: solid grey;
+  float: left;
+  width: 400px;
+}
+
+.items-btn {
+  outline: solid grey;
+  float: right;
+  width: 253px;
+}
+
+.popular-items-content {
+  outline: solid red;
+}
+
 .item {
   outline: solid grey 1px;
   display: inline-block;
   vertical-align: top;
   width: 218px;
-  margin-right: 20px
+  margin-right: 20px;
   margin-bottom: 20px;
   margin-left: 0;
   /*нужно задать min-height?*/
@@ -192,8 +212,21 @@ article h3 {
   margin-bottom: 20px;
 }
 
+.popular-brends-title {
+  outline: solid grey;
+  float: left;
+  width: 400px
+}
+
+.brends-btn {
+  outline: solid grey;
+  float: right;
+  width: 253px;
+}
+
 .brends-logo {
   outline: solid red;
+  margin: 0 -20px;
 }
 
 .brends-logo-item {
@@ -201,9 +234,9 @@ article h3 {
   display: inline-block;
   vertical-align: top;
   width: 218px;
-  margin-right: 60px;
+  /*margin-right: 60px;
   margin-bottom: 20px;
-  margin-left: -40px;
+  margin-left: -40px;*/
 }
 
 .brends-logo-item:nth-child(4n) {
@@ -262,9 +295,13 @@ article h3 {
   outline: solid blue;
 }
 
+.main-footer-info {
+  outline: solid red;
+  float: left;
+  width: 340px;
+}
+
 .bottom-logo {
-  display: inline-block;
-  vertical-align:top;
   width: 220px;
   height: 63px;
   background-color: red;
@@ -273,33 +310,38 @@ article h3 {
 }
 
 .address-footer {
-  outline: solid red;
-  float: left;
+  outline: solid grey;
   width: 340px;
 }
 
-.main-navigation-footer {
+.navigation-footer {
+  outline: solid red;
   float: right;
-  width: 570px;
+  width: 560px;
+}
+
+.main-navigation-footer {
+  outline: solid red;
 }
 
 .promo-navigation-footer {
-  float: right;
-  width: 570px;
+  outline: solid red;
 }
 
 
 .main-navigation-footer li {
-  outline: solid red;
+  outline: solid grey;
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: top;
 }
 
 .promo-navigation-footer li {
-  outline: solid red;
+  outline: solid grey;
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: top;
 }
+/* конец варианта для разметки как на главной*/
+
 
 .page-bottom {
   outline: solid yellow;
@@ -355,9 +397,9 @@ article h3 {
 .breadcrumbs li {
   outline: solid red;
   display: inline-block;
-  vertical-align: baseline;
-  margin-left: -40px;
-  margin-right: 60px;
+  vertical-align: top;
+/*  margin-left: -40px;
+  margin-right: 60px; */
 }
 
 .catalog {
@@ -386,18 +428,41 @@ article h3 {
 
 .sort {
   outline: solid orange;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sort-title {
+  outline: solid blue;
+  display: inline-block;
+  vertical-align: top;
+  width: 110px;
+}
+
+.sort-use {
+  outline: solid blue;
+  display: inline-block;
+  vertical-align: top;
+  width: 380px;
 }
 
 .sort-use li {
   display: inline-block;
+  vertical-align: top;
+
+  /*  margin-left: ; */
 }
 
 .sort-index  {
+  outline: solid blue;
   display: inline-block;
+  vertical-align: top;
+  width: 70px;
 }
 
 .items {
   outline: solid orange;
+  margin: 0 -20px;
 }
 
 .pagination {
@@ -407,4 +472,5 @@ article h3 {
 .pagination li {
   outline: solid grey;
   display: inline-block;
+  vertical-align: top;
 }
