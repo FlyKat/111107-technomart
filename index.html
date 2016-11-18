@@ -14,6 +14,7 @@
         <div class="search">
           <form action="#" method="post" style="height:100%">
             <input type="search" name="search" placeholder="Поиск:" style="height:100%">
+            <label></label>
           </form>
         </div>
         <div class="order">
@@ -77,6 +78,7 @@
       <section class="promo">
         <div class="container clearfix">
           <div class="promo-block stuff">
+            <div class="mark mark-new">новинка</div>
             <h3 class="promo-block-title">Материалы</h3>
               <a class="promo-block-btn" href="#">На любой вкус</a>
           </div>
@@ -135,7 +137,7 @@
           </header>
           <div class="popular-items-content">
             <article class="item">
-                <div class="item-buttons">
+              <div class="item-buttons">
                 <a class="buy-btn" href="#">Купить</a>
                 <a class="bookmark-btn" href="#">В закладки</a>
               </div>
@@ -147,7 +149,7 @@
               <p class="price-now">25500 p.</p>
             </article>
             <article class="item">
-                <div class="item-buttons">
+              <div class="item-buttons">
                 <a class="buy-btn" href="#">Купить</a>
                 <a class="bookmark-btn" href="#">В закладки</a>
               </div>
@@ -159,7 +161,7 @@
               <p class="price-now">15500 p.</p>
             </article>
             <article class="item">
-                <div class="item-buttons">
+              <div class="item-buttons">
                 <a class="buy-btn" href="#">Купить</a>
                 <a class="bookmark-btn" href="#">В закладки</a>
               </div>
@@ -246,30 +248,32 @@
             <input type="radio" name="services-slider-switch" id="services-delivery" checked>
             <input type="radio" name="services-slider-switch" id="services-guarantee">
             <input type="radio" name="services-slider-switch" id="services-credit">
-            <ul class="services-controls">
-              <li>
-                <label for="services-delivery">Доставка</label>
-              </li>
-              <li>
-                <label for="services-guarantee">Гарантия</label>
-              </li>
-              <li>
-                <label for="services-credit">Кредит</label>
-              </li>
-            </ul>
+            <div class="services-controls">
+              <label for="services-delivery">Доставка</label>
+              <label for="services-guarantee">Гарантия</label>
+              <label for="services-credit">Кредит</label>
+            </div>
             <div class="services-slides">
               <div class="services-slide">
-                <h3 class="services-slide-title">Доставка</h3>
-                <p class="services-slide-info">Мы с удовольствием доставим ващ товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,поднимая его на ваш этаж!</p>
+                <div class="services-slide-text delivery">
+                  <h3 class="services-slide-title">Доставка</h3>
+                  <p class="services-slide-info">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж!</p>
+                </div>
               </div>
               <div class="services-slide">
-                <h3 class="services-slide-title">Гарантия</h3>
-                <p class="services-slide-info">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+                <div class="services-slide-text guarantee">
+                  <h3 class="services-slide-title">Гарантия</h3>
+                  <p class="services-slide-info">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
+                  <p class="services-slide-info"> Дом уж восстановите как-нибудь сами.</p>
+                </div>
               </div>
               <div class="services-slide">
-                <h3 class="services-slide-title">Кредит</h3>
-                <p class="services-slide-info">Залезть в долговую яму стало проще! Кредитные консультанты прийдут вам на помощь.</p>
-                <a class="credit-btn">Отправить заявку</a>
+                <div class="services-slide-text  credit">
+                  <h3 class="services-slide-title">Кредит</h3>
+                  <p class="services-slide-info">Залезть в долговую яму стало проще!</p>
+                  <p class="services-slide-info">Кредитные консультанты прийдут вам на помощь.</p>
+                  <a class="credit-btn">Отправить заявку</a>
+                </div>
               </div>
             </div>
           </div>
@@ -283,9 +287,9 @@
             <p>Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастрабайтерах.</p>
             <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>Техномарт работает со многими транспортными компаниями:</p>
             <ul class="shipping">
-              <li class="shipping-item">Деловые линии</li>
-              <li class="shipping-item">Автотрейдинг</li>
-              <li class="shipping-item">ЖелДорЭкспедиция</li>
+              <li>Деловые линии</li>
+              <li>Автотрейдинг</li>
+              <li>ЖелДорЭкспедиция</li>
             </ul>
             <a class="about-us-btn" href="#">Подробнее о компании</a>
           </div>
@@ -367,6 +371,9 @@
         </div>
       </div>
     </section>
-    <!--end pagebottom-->
+    <!--end page-bottom-->
+    <div class="modal-content">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+    </div>
   </body>
 </html>
