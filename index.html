@@ -372,5 +372,50 @@
       </div>
     </section>
     <!--end page-bottom-->
+    <div class="modal-content-feedback">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <form class="write-us-form" action="#" method="post">
+        <div class="modal-content-top">
+          <div class="modal-content-container clearfix">
+            <div class="name-field">
+              <label for="name">Ваше имя:</label>
+              <input type="text" name="name" id="name" placeholder="Представтесь, пожалуйста">
+            </div>
+            <div class="email-field">  
+              <label for="email">Ваш e-mail:</label>
+              <input type="email" name="email" id="email" placeholder="Для отправки ответа">
+            </div>
+            <div class="message-field"> 
+              <label for= "message">Текст письма:</label>
+              <textarea type="text" name="login" id="message">В свободной форме</textarea>
+            </div>  
+          </div>  
+        </div> 
+        <div class="modal-content-bottom">
+          <div class="modal-content-container">
+            <button class="modal-btn modal-btn-send" type="submit">Отправить</button>
+          </div> 
+        </div>  
+      </form>
+    </div>
+    <div class="modal-content-map">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <div id="google-map"></div>
+    </div>
+    <div class="modal-content-cart">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <div class="modal-content-top">
+        <div class="modal-content-container">
+          <p>Товар добавлен в корзину!</p>
+        </div>
+      </div> 
+      <div class="modal-content-bottom">
+        <div class="modal-content-container clearfix">
+          <a class="modal-btn modal-btn-order" href="#">Оформить заказ</a>
+          <button class="modal-btn modal-btn-continue" type="submit">Продолжить покупки</button>
+        </div>
+      </div>
+    </div> 
+    <div class ="modal-overlay"></div>  
   </body>
 </html>
