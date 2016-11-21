@@ -20,6 +20,14 @@ body {
   padding: 0 10px;
 }
 
+input,
+a,
+button,
+img,
+textarea {
+  outline: none;	
+}
+
 .page-top {
   margin: 0;
   padding: 0;
@@ -67,8 +75,6 @@ body {
   display: inline-block;
 
   vertical-align: top;
-
-  outline: none;
 }
 
 .search input[type="search"] {
@@ -88,6 +94,11 @@ body {
   opacity: 1;
 }
 
+.search input[type="search"]:focus {
+  color: #000000;
+  background: #ffffff;
+}
+
 .search input[type="search"] + label::before {
   content: "";
   position: absolute;
@@ -104,16 +115,11 @@ body {
 }
 
 .search input[type="search"]:hover + label::before {
-  color: #ffffff;
   background: #293449;
   opacity: 1;
 }
 
-
 .search input[type="search"]:focus + label::before {
-  color: #000000;
-
-  background-color: #ffffff;
   background: transparent url("../img/sprite.png") no-repeat;
   background-position: -15px -876px;
 }
@@ -418,7 +424,7 @@ body {
 }
 
 .logged-user:active{
-  color: #b2b2b2;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .logged-user:hover::before {
@@ -1268,6 +1274,7 @@ body {
 
 .services-slide-title {
   margin: 0;
+  margin-top: 2px;
   margin-bottom: 34px;
 
   font-family: "Cuprum","Arial", sans-serif;
@@ -1449,14 +1456,14 @@ body {
 .breadcrumbs li {
   position: relative;
   display: inline-block;
-  margin: 0;
+  margin: 0 39px 0 0;
   padding: 0;
 
   font-size: 0;
   vertical-align: top;
 }
 
-.breadcrumbs li:nth-child(2) {
+/*.breadcrumbs li:nth-child(2) {
   margin-left: 54px;
 }
 
@@ -1466,7 +1473,7 @@ body {
 
 .breadcrumbs li:nth-child(4) {
   margin-left: 43px;
-}
+}*/
 
 .breadcrumbs li::before {  
   content: "";
@@ -1481,17 +1488,33 @@ body {
   background-position: -15px -787px;
 }
 
-.breadcrumbs li:first-child,
 .breadcrumbs li:first-child::before {
-  display: none;
+  content: none;
 }
 
 .breadcrumbs-nav {
+  position: relative;
+
+  display: inline-block;
+
   font-size: 13px;  
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+}
+
+.breadcrumbs-nav.home {
+  position: relative;
+  top: 2px;
+  left: 0;
+
+  width: 15px;
+  height: 12px;
+  text-indent: -9999px;
+
+  background: url("../img/sprite.png") no-repeat;
+  background-position: -15px -461px;
 }
 
 .catalog {
@@ -1775,7 +1798,6 @@ input[type="radio"]:checked + label::after {
   background: transparent;
   border: 1px solid #e5e5e5;
   border-radius: 2px;
-  outline: none;
 
   cursor: pointer;
 }
@@ -2227,6 +2249,33 @@ input[type="radio"]:checked + label::after {
 
 /* modal-content */
 
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-content-feedback {
   position: fixed;
   top: 25%;  
@@ -2248,6 +2297,15 @@ input[type="radio"]:checked + label::after {
   margin: 0 auto;
   padding: 0 80px;
  } 
+
+.modal-content-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
  
  .modal-content-close {
   position: absolute;
@@ -2372,6 +2430,7 @@ input[type="radio"]:checked + label::after {
   top: 50%;
   left: 50%;
   z-index: 50; 
+
   display: none;
   width: 940px;  
   height: 448px;
@@ -2454,3 +2513,4 @@ input[type="radio"]:checked + label::after {
 
   background: rgba(0, 0, 0, 0.5);
 } */
+
