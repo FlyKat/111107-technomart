@@ -990,6 +990,7 @@ textarea {
 
 .item .item-img {
   text-align: center;
+  max-height: 168px;
   line-height: 168px;
 }
 
