@@ -95,6 +95,22 @@ textarea {
   opacity: 1;
 }
 
+.search input[type="search"]::-webkit-input-placeholder { 
+  color: #ffffff;
+}
+
+.search input[type="search"]::-moz-placeholder { 
+  color: #ffffff;
+}
+
+.search input[type="search"]:-moz-placeholder { 
+  color: #ffffff;
+}
+
+.search input[type="search"]:-ms-input-placeholder { 
+  color: #ffffff;
+}
+
 .search input[type="search"]:focus {
   color: #000000;
   background: #ffffff;
@@ -115,8 +131,11 @@ textarea {
   cursor: pointer;
 }
 
+.search input[type="search"]:hover {
+  background: #212a3a;	
+}
+
 .search input[type="search"]:hover + label::before {
-  background: #293449;
   opacity: 1;
 }
 
@@ -276,9 +295,8 @@ textarea {
   position: relative;
 
   display: block;
-  width: 144px;
   margin-bottom: 5px;
-  padding: 10px 50px;
+  padding: 10px 49px;
   padding-left: 70px;
 
   font-size: 21px;
@@ -989,20 +1007,16 @@ textarea {
 }
 
 .item .item-img {
-  position: relative;
-  display: block;
   width: 218px;
   height: 168px;
- }
-
-.item .image img {
-  position: absolute;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  overflow: hidden;
 }
 
-.item-title {:;
+.item-image img {
+  max-width: 100%;
+}
+
+.item-title {
   min-height: 40px;
   margin: 0;
   margin-top: 10px;
@@ -1242,17 +1256,17 @@ textarea {
 
 .services-slide:nth-child(1) {
   background: transparent url("../img/delivery-slide.png") no-repeat;
-  background-position: 175px 24px; 
+  background-position: 150px 24px; 
 }
 
 .services-slide:nth-child(2) {
   background: transparent url("../img/guarantee-slide.png") no-repeat;
-  background-position: 264px 2px;  
+  background-position: 240px 2px;  
 }
 
 .services-slide:nth-child(3) {
   background: transparent url("../img/credit-slide.png") no-repeat;
-  background-position: 206px 0; /* не понимаю почему уходит за границу, беру расстояния с макета. как правильно рассчитать первую координату? */
+  background-position: 183px 0; 
 }
 
 #services-delivery:checked ~ .services-slides .services-slide:nth-child(1),
@@ -1270,7 +1284,7 @@ textarea {
 }
 
 .services-slide-text.guarantee {
-  width: 380px; /* на макете ровно 380, не понимаю, почему не выходит*/
+  width: 380px; 
 }
 
 .services-slide-text.credit {
@@ -1469,18 +1483,6 @@ textarea {
   vertical-align: top;
 }
 
-/*.breadcrumbs li:nth-child(2) {
-  margin-left: 54px;
-}
-
-.breadcrumbs li:nth-child(3) {
-  margin-left: 40px;
-}
-
-.breadcrumbs li:nth-child(4) {
-  margin-left: 43px;
-}*/
-
 .breadcrumbs li::before {  
   content: "";
   position: absolute;
@@ -1521,10 +1523,6 @@ textarea {
 
   background: url("../img/sprite.png") no-repeat;
   background-position: -15px -461px;
-}
-
-.catalog {
-  /*outline: solid yellow;*/
 }
 
 .catalog-title {
@@ -1716,17 +1714,30 @@ input[type="checkbox"] + label::before {
   width: 27px;
   height: 23px;
 
-  background: url("../img/sprite.png") no-repeat;
-  background-position: -15px -215px;
+  background: url("../img/spritecheckbox.png") no-repeat;
+  background-position: -10px -10px;
 }
 
 input[type="checkbox"]:checked + label::before {
-  background-position: -15px -268px;
+  background-position: -10px -139px;
 }
 
+input[type="checkbox"] + label:hover::before {
+  background-position: -10px -53px;
+}
+
+input[type="checkbox"]:checked + label:hover::before {
+  background-position: -10px -182px;
+}
 
 input[type="checkbox"]:disabled + label::before {
-  opacity: 0.4;  /* как делать, если у чекбокса 0,3 - а у подписи 0,4 и где вообще будет disabled*/
+  color: rgba(0, 0, 0, 0.4);
+  background-position: -10px -96px;
+}
+
+input[type="checkbox"]:checked:disabled + label {
+  color: rgba(0, 0, 0, 0.4);
+  background-position: -10px -225px;  
 }
 
 .power-filter {
@@ -1786,6 +1797,19 @@ input[type="radio"]:checked + label::after {
 
   background: #c1c1c1;
   border-radius: 50%;
+}
+
+input[type="radio"] + label:hover::before {
+  border-color: #b5b5b5;
+}
+
+input[type="radio"]:checked + label:hover::after {
+  background: #b5b5b5;
+}
+
+input[type="radio"]:disabled + label,
+input[type="radio"]:checked:disabled + label {
+  color: rgba(0, 0, 0, 0.4);  
 }
 
 
@@ -2072,7 +2096,7 @@ input[type="radio"]:checked + label::after {
 
 .navigation-footer {
   float: right;
-  width: 560px;
+  width: 562px;
   margin: 0;
   padding: 0;
 
@@ -2255,6 +2279,37 @@ input[type="radio"]:checked + label::after {
 
 /* modal-content */
 
+.modal-content-feedback {
+  position: fixed;
+  top: 25%;  
+  left: 50%;
+  display: none;
+  z-index: 100; 
+  width: 620px; 
+  margin-left: -310px; 
+
+  color: #000000;
+
+  background: #ffffff;  
+  border-top: 7px solid #ee3643;  
+  box-shadow: 0 20px 37px #595a5a; 
+}
+
+.modal-content-container { 
+  width: 460px;
+  margin: 0 auto;
+  padding: 0 80px;
+ } 
+
+.modal-feedback-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-feedback-error {
+  animation: shake 0.6s;
+}
+
 @keyframes bounce {
   0%   {
   -webkit-transform: translateY(-2000px);
@@ -2295,30 +2350,6 @@ input[type="radio"]:checked + label::after {
             transform: translateX(10px);
   }
 }
-
-.modal-content-feedback {
-  position: fixed;
-  top: 25%;  
-  left: 50%;
-  display: none;
-  z-index: 100; 
-  width: 620px; 
-  margin-left: -310px; 
-
-  color: #000000;
-
-  background: #ffffff;  
-  border-top: 7px solid #ee3643;  
-  box-shadow: 0 20px 37px #595a5a; 
-}
-
-.modal-content-container { 
-  width: 460px;
-  margin: 0 auto;
-  padding: 0 80px;
- } 
-
-
 
 .modal-content-feedback .modal-content-top {
   padding-top: 45px;
@@ -2408,7 +2439,7 @@ input[type="radio"]:checked + label::after {
   background: #b22832;	
 }
 
-.modal-content-map { /*???*/
+.modal-content-map { 
   position: fixed;
   top: 50%;
   left: 50%;
@@ -2417,11 +2448,15 @@ input[type="radio"]:checked + label::after {
   display: none;
   width: 940px;  
   height: 448px;
-  margin-top: -234px;  
+  margin-top: -224px;  
   margin-left: -470px;  
 
-  background: #e9e5dc url(../img/modal-map1.png); /*???*/
+  background: #e9e5dc url("../img/modal-map.png"); 
   box-shadow: 0 0 15px 0 #c4c3c4;
+}
+
+.modal-map-show {
+  display: block;
 }
 
 .modal-content-cart {
@@ -2484,16 +2519,9 @@ input[type="radio"]:checked + label::after {
   background: #ffffff;  
 }
 
-.modal-content-show {
-  display: block;
-  animation: bounce 0.6s;
-}
-
-.modal-error {
-  animation: shake 0.6s;
-}
-
-.modal-content-close {
+.modal-feedback-close,
+.modal-map-close,
+.modal-cart-close {
   position: absolute;
   top: 9px; 
   right: 9px;	
@@ -2507,8 +2535,12 @@ input[type="radio"]:checked + label::after {
   cursor: pointer;
 }
 
-.modal-content-close::before,
-.modal-content-close::after {
+.modal-feedback-close::before,
+.modal-feedback-close::after,
+.modal-map-close::before,
+.modal-map-close::after,
+.modal-cart-close::before,
+.modal-cart-close::after {
   content: "";
   position: absolute;
   top: 8px; 
@@ -2521,13 +2553,18 @@ input[type="radio"]:checked + label::after {
   border-radius: 1px; 	 
 }
 
-.modal-content-close::before {
+
+.modal-feedback-close::before,
+.modal-map-close::before,
+.modal-cart-close::before {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.modal-content-close::after {
+.modal-feedback-close::after,
+.modal-map-close::after,
+.modal-cart-close::after {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);	
           transform: rotate(-45deg);
