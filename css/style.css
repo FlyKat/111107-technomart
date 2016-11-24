@@ -6,6 +6,7 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: #000000;
+  
   background: #ffffff;
 }
 
@@ -79,9 +80,13 @@ textarea {
   vertical-align: top;
 }
 
-.search input[type="search"] {
+.search label {
+  text-indent: -9999px;	
+}
+
+input[type="search"] {
   width: 270px;
-  min-height: 42px;
+  height: 42px;
   margin: 0;
   padding: 11px 10px;
   padding-top: 12px;
@@ -97,29 +102,31 @@ textarea {
   opacity: 1;
 }
 
-.search input[type="search"]::-webkit-input-placeholder {
+
+input[type="search"]::-webkit-input-placeholder {
   color:#ffffff;
 } 
-.search input[type="search"]::-moz-placeholder {
+
+input[type="search"]::-moz-placeholder {
   color:#ffffff;
   opacity: 1;
 }
 
-.search input[type="search"]:-moz-placeholder {
+input[type="search"]:-moz-placeholder {
   color:#ffffff;
   opacity: 1;
  }
 
-.search input[type="search"]:-ms-input-placeholder {
+input[type="search"]:-ms-input-placeholder {
   color:#ffffff;
 } 
 
-.search input[type="search"]:focus {
+input[type="search"]:focus {
   color: #000000;
   background: #ffffff;
 }
 
-.search label {
+input[type="search"] + label::before {
   content: "";
   position: absolute;
   top: 12px;
@@ -134,17 +141,18 @@ textarea {
   cursor: pointer;
 }
 
-.search input[type="search"]:hover {
+input[type="search"]:hover {
   background: #212a3a;	
 }
 
-.search label:hover {
+input[type="search"]:hover + label::before {
   opacity: 1;
 }
 
-.search label:active {
+input[type="search"]:focus + label::before {
   background: transparent url("../img/sprite.png") no-repeat;
   background-position: -15px -876px;
+  opacity: 1;
 }
 
 .order {
