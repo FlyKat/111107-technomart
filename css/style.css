@@ -5,6 +5,8 @@ body {
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
+  color: #000000;
+  background: #ffffff;
 }
 
 .clearfix::after {
@@ -79,7 +81,7 @@ textarea {
 
 .search input[type="search"] {
   width: 270px;
-  height: 100%;
+  min-height: 42px;
   margin: 0;
   padding: 11px 10px;
   padding-top: 12px;
@@ -95,28 +97,29 @@ textarea {
   opacity: 1;
 }
 
-.search input[type="search"]::-webkit-input-placeholder { 
-  color: #ffffff;
+.search input[type="search"]::-webkit-input-placeholder {
+  color:#ffffff;
+} 
+.search input[type="search"]::-moz-placeholder {
+  color:#ffffff;
+  opacity: 1;
 }
 
-.search input[type="search"]::-moz-placeholder { 
-  color: #ffffff;
-}
+.search input[type="search"]:-moz-placeholder {
+  color:#ffffff;
+  opacity: 1;
+ }
 
-.search input[type="search"]:-moz-placeholder { 
-  color: #ffffff;
-}
-
-.search input[type="search"]:-ms-input-placeholder { 
-  color: #ffffff;
-}
+.search input[type="search"]:-ms-input-placeholder {
+  color:#ffffff;
+} 
 
 .search input[type="search"]:focus {
   color: #000000;
   background: #ffffff;
 }
 
-.search input[type="search"] + label::before {
+.search label {
   content: "";
   position: absolute;
   top: 12px;
@@ -135,11 +138,11 @@ textarea {
   background: #212a3a;	
 }
 
-.search input[type="search"]:hover + label::before {
+.search label:hover {
   opacity: 1;
 }
 
-.search input[type="search"]:focus + label::before {
+.search label:active {
   background: transparent url("../img/sprite.png") no-repeat;
   background-position: -15px -876px;
 }
@@ -717,6 +720,8 @@ textarea {
   display: inline-block;
   width: 22px;
   height: 40px;
+
+  vertical-align: top;
 
   background: transparent url("../img/sprite.png") no-repeat;
 
@@ -1507,6 +1512,7 @@ textarea {
 
   font-size: 13px;  
   line-height: 18px;
+  vertical-align: top;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
@@ -2381,6 +2387,7 @@ input[type="radio"]:checked:disabled + label {
   font-family: "Cuprum", "Arial", sans-serif; 
   font-size: 18px;
   line-height: 18px;
+  vertical-align: top;
 }
   
 .write-us-form input[type="text"],
